@@ -1,0 +1,43 @@
+```dart import 'package:flutter/material.dart'; 
+import 'explore_screen.dart';
+class GettingStartedScreen extends StatelessWidget { 
+  @override
+    Widget build(BuildContext context) { 
+        double screenWidth=MediaQuery.of(context).size.width;
+        double screenHeight=MediaQuery.of(context).size.height;
+        return Scaffold( 
+            body: Column( 
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Spacer(),Container(width:screenWidth*0.6,height:screenHeight*0.3,
+                decoration:BoxDecoration(
+                    color:Colors.grey[300],borderRadius:BorderRadius.circular(20),
+                    ),
+                ),
+            ),
+            SizedBox(height:screenHeight*0.02),
+            Text("Podikes",style:TextStyle(fontSize:screenWidth*0.08,fontWeight:FontWeight.bold),
+            ),
+            Padding(
+                padding:EdgeInsets.symmetric(horizontal:screenWidth*0.1),
+                child:Text("A podcast is an episodic series of spoken word digital audio files that a user can download to a personal device for easy listening.",
+                textAlign:TextAlign.center,style:TextStyle(fontSize:screenWidth*0.04,color:Colors.grey),
+                ),
+            ),
+            SizedBox(height:screenHeight*0.02),
+            ElevatedButton(
+                onPressed:(){
+                    Navigator.push(context,MaterialPageRoute(builder:(context)=>ExploreScreen()));
+                },
+                child:Text("Get Started",style:TextStyle(fontSize:screenWidth*0.05),
+                ),
+            ),
+            Spacer(),
+            ],
+        ),
+    );
+  }
+}
+```
+                
+                    
+                
